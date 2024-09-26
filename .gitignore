@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+        }
+        .btn {
+            background-color: #0f0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Website</h1>
+    </header>
+
+    <div class="container">
+        <h2>Random Item Generator</h2>
+        <button class="btn" onclick="randomItem()">Get Random Item</button>
+        <p id="result"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website</p>
+    </footer>
+
+    <script>
+        function randomItem() {
+            const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
+            const result = items[Math.floor(Math.random() * items.length)];
+            document.getElementById("result").innerText = "You got: " + result;
+        }
+    </script>
+</body>
+</html>
